@@ -51,21 +51,7 @@
         "summary" : "Obtain a list of accounts",
         "description" : "The List Accounts API allows a third party to obtain a list of accounts on the request of a customer. A list of accounts will be returned, and should reflect the list of accounts that the same customer would see if they accessed their account through a mobile app or web browser. A query parameter allows the list of accounts returned to be filtered by \"open\" and \"closed\" status.",
         "operationId" : "listAccounts",
-        "parameters" : [ {
-          "$ref" : "#/components/parameters/584fc36c-caeb-4d15-b9c7-caa92bec8b13"
-        }, {
-          "$ref" : "#/components/parameters/b3bb00de-945e-4c70-b551-fbee1d774f3c"
-        }, {
-          "$ref" : "#/components/parameters/76a77282-bb75-4a1a-a13f-d744cc3d6b26"
-        }, {
-          "$ref" : "#/components/parameters/c6bcf296-c52d-46f3-bd80-3f4d46f3fc26"
-        }, {
-          "$ref" : "#/components/parameters/576785be-5218-4fc5-996e-2743b809ccdb"
-        }, {
-          "$ref" : "#/components/parameters/37548e8b-cd92-443d-8601-073f5a071504"
-        }, {
-          "$ref" : "#/components/parameters/3dd130f1-fb45-4300-97d0-6d8f8dd313dc"
-        } ],
+        "parameters" : [ ],
         "responses" : {
           "200" : {
             "description" : "Success",
@@ -259,18 +245,6 @@
           "schema" : {
             "type" : "string"
           }
-        }, {
-          "$ref" : "#/components/parameters/584fc36c-caeb-4d15-b9c7-caa92bec8b13"
-        }, {
-          "$ref" : "#/components/parameters/b3bb00de-945e-4c70-b551-fbee1d774f3c"
-        }, {
-          "$ref" : "#/components/parameters/76a77282-bb75-4a1a-a13f-d744cc3d6b26"
-        }, {
-          "$ref" : "#/components/parameters/c6bcf296-c52d-46f3-bd80-3f4d46f3fc26"
-        }, {
-          "$ref" : "#/components/parameters/576785be-5218-4fc5-996e-2743b809ccdb"
-        }, {
-          "$ref" : "#/components/parameters/37548e8b-cd92-443d-8601-073f5a071504"
         } ],
         "responses" : {
           "200" : {
@@ -472,20 +446,6 @@
           "schema" : {
             "type" : "string"
           }
-        }, {
-          "$ref" : "#/components/parameters/f6e73e06-de71-4b5c-b0cc-423530047b15"
-        }, {
-          "$ref" : "#/components/parameters/646217b5-e315-4f48-8c6e-3a6242cef55f"
-        }, {
-          "$ref" : "#/components/parameters/8509122c-a84f-4572-b4e2-8bccacf97377"
-        }, {
-          "$ref" : "#/components/parameters/fd2ef629-9074-4c92-8ee1-7a409ac75cf2"
-        }, {
-          "$ref" : "#/components/parameters/c6bcf296-c52d-46f3-bd80-3f4d46f3fc26"
-        }, {
-          "$ref" : "#/components/parameters/576785be-5218-4fc5-996e-2743b809ccdb"
-        }, {
-          "$ref" : "#/components/parameters/37548e8b-cd92-443d-8601-073f5a071504"
         } ],
         "responses" : {
           "200" : {
@@ -697,12 +657,6 @@
           "schema" : {
             "type" : "string"
           }
-        }, {
-          "$ref" : "#/components/parameters/c6bcf296-c52d-46f3-bd80-3f4d46f3fc26"
-        }, {
-          "$ref" : "#/components/parameters/576785be-5218-4fc5-996e-2743b809ccdb"
-        }, {
-          "$ref" : "#/components/parameters/37548e8b-cd92-443d-8601-073f5a071504"
         } ],
         "responses" : {
           "200" : {
@@ -2371,7 +2325,54 @@
       }
     },
     "requestBodies" : { },
-    "headers" : { },
+    "headers" : {
+      "x-tenant" : {
+        "description" : "x-tenant",
+        "required" : true,
+        "deprecated" : false,
+        "style" : "simple",
+        "explode" : false,
+        "schema" : {
+          "uniqueItems" : false,
+          "nullable" : false,
+          "readOnly" : false,
+          "deprecated" : false
+        }
+      },
+      "Authorization" : {
+        "description" : "Authorization",
+        "required" : true,
+        "deprecated" : false,
+        "style" : "simple",
+        "explode" : false,
+        "schema" : {
+          "uniqueItems" : false,
+          "type" : "string",
+          "format" : "byte",
+          "nullable" : false,
+          "readOnly" : false,
+          "deprecated" : false
+        }
+      },
+      "hide_groups_header" : {
+        "description" : "hide_groups_header",
+        "required" : false,
+        "deprecated" : false,
+        "style" : "simple",
+        "explode" : false,
+        "schema" : {
+          "uniqueItems" : false,
+          "nullable" : false,
+          "readOnly" : false,
+          "deprecated" : false
+        },
+        "examples" : {
+          "xyz" : {
+            "value" : "xyz"
+          }
+        }
+      }
+    },
     "securitySchemes" : {
       "oauth2" : {
         "type" : "oauth2",
