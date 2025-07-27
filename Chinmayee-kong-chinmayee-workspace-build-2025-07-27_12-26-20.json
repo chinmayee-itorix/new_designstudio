@@ -1,0 +1,97 @@
+{
+  "id" : "68861aec697a3d79b9f38bf7",
+  "cts" : 1753619180294,
+  "mts" : 1753619180294,
+  "createdBy" : "Akshatha SM",
+  "modifiedBy" : "Akshatha SM",
+  "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+  "runtime" : "Chinmayee-kong",
+  "workspace" : "chinmayee-workspace",
+  "swaggerId" : "",
+  "serviceName" : "shashil-services",
+  "revision" : 0,
+  "swaggerVersion" : "",
+  "swaggerName" : "",
+  "serviceId" : "1f29388e-dc91-4dc9-9747-1032402205a4",
+  "service" : {
+    "serviceId" : "1f29388e-dc91-4dc9-9747-1032402205a4",
+    "serviceName" : "shashil-services",
+    "protocol" : "https",
+    "host" : "mock.apiwiz.io",
+    "hosts" : [ ],
+    "basePath" : "/",
+    "basePaths" : [ ],
+    "port" : 443,
+    "ports" : [ ],
+    "metadata" : {
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    },
+    "kongKonnectPayload" : { }
+  },
+  "routes" : [ {
+    "routeId" : "dc4079d6-beef-4b00-a435-14a7b9d93be9",
+    "routeName" : "shashil-routes",
+    "service" : {
+      "_id" : "1f29388e-dc91-4dc9-9747-1032402205a4"
+    },
+    "protocols" : [ "http", "https" ],
+    "methods" : [ "PATCH", "OPTIONS" ],
+    "paths" : [ "/shashil/routes-check" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false,
+      "headers" : [ ]
+    },
+    "kongRuntime" : {
+      "id" : "68847af02833022f58cbaa4f",
+      "name" : "Chinmayee-kong",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 12,
+      "dbless" : false
+    }
+  } ],
+  "plugins" : [ {
+    "id" : "9e1bfc0a-caae-4b64-bc22-9594dc16ce15",
+    "pluginName" : "request-transformer",
+    "enabled" : true,
+    "workspaceName" : "chinmayee-workspace",
+    "routeName" : "shashil-routes",
+    "configs" : {
+      "add" : {
+        "headers" : [ ],
+        "querystring" : [ ],
+        "body" : [ ]
+      },
+      "rename" : {
+        "headers" : [ ],
+        "querystring" : [ ],
+        "body" : [ ]
+      },
+      "replace" : {
+        "headers" : [ ],
+        "querystring" : [ ],
+        "body" : [ ],
+        "uri" : "/api/v2"
+      },
+      "remove" : {
+        "headers" : [ ],
+        "querystring" : [ ],
+        "body" : [ ]
+      },
+      "append" : {
+        "headers" : [ ],
+        "querystring" : [ ],
+        "body" : [ ]
+      }
+    }
+  } ]
+}
