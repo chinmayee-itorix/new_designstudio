@@ -1,0 +1,112 @@
+{
+  "id" : "68861a9f697a3d79b9f38bdf",
+  "cts" : 1753619103460,
+  "mts" : 1753619103460,
+  "createdBy" : "Akshatha SM",
+  "modifiedBy" : "Akshatha SM",
+  "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+  "runtime" : "Chinmayee-kong",
+  "workspace" : "chinmayee-workspace",
+  "swaggerId" : "",
+  "serviceName" : "otp-services-ezio",
+  "revision" : 0,
+  "swaggerVersion" : "",
+  "swaggerName" : "",
+  "serviceId" : "75f051ce-f3a0-4759-b78a-e4cece0dc288",
+  "service" : {
+    "serviceId" : "75f051ce-f3a0-4759-b78a-e4cece0dc288",
+    "serviceName" : "otp-services-ezio",
+    "protocol" : "https",
+    "host" : "localhost",
+    "hosts" : [ ],
+    "basePath" : "/",
+    "basePaths" : [ ],
+    "port" : 443,
+    "ports" : [ ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    },
+    "kongKonnectPayload" : { }
+  },
+  "routes" : [ {
+    "routeId" : "daa24f38-32e3-480b-bb17-41f462ec6eff",
+    "routeName" : "validateOTP",
+    "service" : {
+      "_id" : "75f051ce-f3a0-4759-b78a-e4cece0dc288"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/ez/otp/v1/validate" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false,
+      "headers" : [ ]
+    },
+    "kongRuntime" : {
+      "id" : "68847af02833022f58cbaa4f",
+      "name" : "Chinmayee-kong",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 12,
+      "dbless" : false
+    }
+  }, {
+    "routeId" : "ff762c37-ba33-480b-93e2-e9d907be2011",
+    "routeName" : "sendOTP",
+    "service" : {
+      "_id" : "75f051ce-f3a0-4759-b78a-e4cece0dc288"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/ez/otp/v1/send" ],
+    "metadata" : {
+      "path_handling" : "v0",
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false,
+      "headers" : [ ]
+    },
+    "kongRuntime" : {
+      "id" : "68847af02833022f58cbaa4f",
+      "name" : "Chinmayee-kong",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 12,
+      "dbless" : false
+    }
+  } ],
+  "plugins" : [ {
+    "id" : "c6d483ae-3e23-4fdd-a8cd-3ccbbee29680",
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "chinmayee-workspace",
+    "routeName" : "validateOTP",
+    "configs" : {
+      "allow" : [ "otp-service:+app_two_product", "otp-service:", "otp-service:+otp_validate" ],
+      "hide_groups_header" : false
+    }
+  }, {
+    "id" : "e667bcf2-f790-4f7e-90a4-9c4496659a2f",
+    "pluginName" : "acl",
+    "enabled" : true,
+    "workspaceName" : "chinmayee-workspace",
+    "routeName" : "sendOTP",
+    "configs" : {
+      "allow" : [ "otp-service:+app_two_product", "otp-service:", "otp-service:+otp_validate" ],
+      "hide_groups_header" : false
+    }
+  } ]
+}
