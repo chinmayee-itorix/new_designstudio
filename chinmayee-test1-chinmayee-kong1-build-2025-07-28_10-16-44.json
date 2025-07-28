@@ -1,0 +1,114 @@
+{
+  "id" : "68874e0c0a35223ee160747a",
+  "cts" : 1753697804472,
+  "mts" : 1753697804472,
+  "createdBy" : "Elanie tom",
+  "modifiedBy" : "Elanie tom",
+  "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+  "runtime" : "chinmayee-test1",
+  "workspace" : "chinmayee-kong1",
+  "swaggerId" : "6811f47631634f41ca0e626c",
+  "serviceName" : "notify-api-v1",
+  "revision" : 2,
+  "swaggerVersion" : "3.0",
+  "swaggerName" : "Notify-API-V1",
+  "serviceId" : "eb485735-2a78-488a-b285-0ec1ed533922",
+  "service" : {
+    "serviceId" : "eb485735-2a78-488a-b285-0ec1ed533922",
+    "serviceName" : "notify-api-v1",
+    "protocol" : "http",
+    "host" : "api.tonikbank.com",
+    "hosts" : [ "api.tonikbank.com", "sandboxapi.tonikbank.com" ],
+    "basePath" : "/v1/notify",
+    "basePaths" : [ "/v1/notify" ],
+    "port" : 80,
+    "ports" : [ -1 ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    },
+    "kongKonnectPayload" : { }
+  },
+  "routes" : [ {
+    "routeId" : "2ba710d5-2fd4-4dbd-98b5-10e2e74b26b1",
+    "routeName" : "PostNotifyAckDeliveryAndRead",
+    "service" : {
+      "_id" : "eb485735-2a78-488a-b285-0ec1ed533922"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/notification-status" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "6887457f0a35223ee1607332",
+      "name" : "chinmayee-test1",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 1,
+      "dbless" : false
+    }
+  }, {
+    "routeId" : "d48a4fe9-da28-45a5-bace-4b316190d2f2",
+    "routeName" : "test-check12",
+    "service" : {
+      "_id" : "eb485735-2a78-488a-b285-0ec1ed533922"
+    },
+    "protocols" : [ "http", "https" ],
+    "methods" : [ "GET", "OPTIONS" ],
+    "paths" : [ "/test-check" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "6887457f0a35223ee1607332",
+      "name" : "chinmayee-test1",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 1,
+      "dbless" : false
+    }
+  } ],
+  "plugins" : [ {
+    "id" : "703ae1bb-20a8-4f30-bae5-41c0aabcaf5b",
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "",
+    "serviceName" : "notify-api-v1",
+    "configs" : { }
+  }, {
+    "id" : "48a99973-78e1-4ff2-ad33-a20ea57b81e0",
+    "pluginName" : "request-transformer",
+    "enabled" : true,
+    "workspaceName" : "",
+    "routeName" : "PostNotifyAckDeliveryAndRead",
+    "configs" : {
+      "add" : { },
+      "replace" : {
+        "uri" : "/v2/notification"
+      },
+      "remove" : { }
+    }
+  } ]
+}
