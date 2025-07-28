@@ -1,0 +1,173 @@
+{
+  "id" : "68876696ada58a21746d45b0",
+  "cts" : 1753704086273,
+  "mts" : 1753704086273,
+  "createdBy" : "Elanie tom",
+  "modifiedBy" : "Elanie tom",
+  "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+  "runtime" : "chinmayee-test1",
+  "workspace" : "chinmayee-kong1",
+  "swaggerId" : "6528d72cec2dea732439b34c",
+  "serviceName" : "telecustomernetwork",
+  "revision" : 1,
+  "swaggerVersion" : "3.0",
+  "swaggerName" : "TeleCustomerNetwork",
+  "serviceId" : "6848d874-e392-4ca0-b85d-35bbe129dfb6",
+  "service" : {
+    "serviceId" : "6848d874-e392-4ca0-b85d-35bbe129dfb6",
+    "serviceName" : "telecustomernetwork",
+    "protocol" : "http",
+    "host" : "uat-api.apiwiz.io",
+    "hosts" : [ "uat-api.apiwiz.io", "mock.apiwiz.io" ],
+    "basePath" : "/oauth2/v1",
+    "basePaths" : [ "/oauth2/v1", "/v1" ],
+    "port" : 80,
+    "ports" : [ -1 ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    },
+    "kongKonnectPayload" : { }
+  },
+  "routes" : [ {
+    "routeId" : "a9e902d9-bbc4-4e79-92ca-906a4dd2b070",
+    "routeName" : "deleteCustomerById",
+    "service" : {
+      "_id" : "6848d874-e392-4ca0-b85d-35bbe129dfb6"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "DELETE" ],
+    "paths" : [ "/customers/{customerId}" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "6887457f0a35223ee1607332",
+      "name" : "chinmayee-test1",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 1,
+      "dbless" : false
+    }
+  }, {
+    "routeId" : "08a3cc44-97e0-457d-b2ce-9235b5e14624",
+    "routeName" : "updateCustomerById",
+    "service" : {
+      "_id" : "6848d874-e392-4ca0-b85d-35bbe129dfb6"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "PUT" ],
+    "paths" : [ "/customers/{customerId}" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "6887457f0a35223ee1607332",
+      "name" : "chinmayee-test1",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 1,
+      "dbless" : false
+    }
+  }, {
+    "routeId" : "3fd418ef-a282-4ef2-a182-c5e516925213",
+    "routeName" : "addNewCustomer",
+    "service" : {
+      "_id" : "6848d874-e392-4ca0-b85d-35bbe129dfb6"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/customers" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "6887457f0a35223ee1607332",
+      "name" : "chinmayee-test1",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 1,
+      "dbless" : false
+    }
+  }, {
+    "routeId" : "483b9aad-2548-45e5-8dec-b76871b7fac3",
+    "routeName" : "getCustomerList",
+    "service" : {
+      "_id" : "6848d874-e392-4ca0-b85d-35bbe129dfb6"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/customers" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "6887457f0a35223ee1607332",
+      "name" : "chinmayee-test1",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 1,
+      "dbless" : false
+    }
+  } ],
+  "plugins" : [ {
+    "id" : "a1d88f39-8177-40c6-8c95-fd8e2b6e9a96",
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "",
+    "serviceName" : "telecustomernetwork",
+    "configs" : { }
+  }, {
+    "id" : "08f0a37c-b95f-42f4-8d96-a64b32e291e4",
+    "pluginName" : "post-function",
+    "enabled" : true,
+    "workspaceName" : "",
+    "serviceName" : "telecustomernetwork",
+    "configs" : {
+      "access" : [ ],
+      "body_filter" : [ ],
+      "log" : [ ],
+      "certificate" : [ "kong.service.set_target(\"https://localhost\",9000)" ],
+      "header_filter" : [ ],
+      "rewrite" : [ ]
+    }
+  } ]
+}
