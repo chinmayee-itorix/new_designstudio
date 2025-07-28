@@ -1,0 +1,129 @@
+{
+  "id" : "6886ed40335dff20ce23eacc",
+  "cts" : 1753673024852,
+  "mts" : 1753673024852,
+  "createdBy" : "Akshatha SM",
+  "modifiedBy" : "Akshatha SM",
+  "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+  "runtime" : "Chinmayee-kong",
+  "workspace" : "chinmayee-workspace",
+  "swaggerId" : "67fe3b9a8e7a40729bf1a23d",
+  "serviceName" : "documentuploader-api-v1",
+  "revision" : 2,
+  "swaggerVersion" : "3.0",
+  "swaggerName" : "DocumentUploader-API-V1",
+  "serviceId" : "edbe4791-fca0-4c03-b7e9-6f1ed13ae68b",
+  "service" : {
+    "serviceName" : "documentuploader-api-v1",
+    "protocol" : "http",
+    "host" : "devapi.tonikbank.com",
+    "hosts" : [ "devapi.tonikbank.com", "qa-dev-ieia.apiwiz.io" ],
+    "basePath" : "/v0",
+    "basePaths" : [ "/v0", "/ii" ],
+    "port" : 80,
+    "ports" : [ -1 ],
+    "metadata" : {
+      "retries" : 5,
+      "connect_timeout" : 60000,
+      "write_timeout" : 60000,
+      "read_timeout" : 60000
+    },
+    "kongKonnectPayload" : { }
+  },
+  "routes" : [ {
+    "routeId" : "b82c6d9a-c41b-4e05-8718-c2b36d755c62",
+    "routeName" : "POSTImgProcessor",
+    "service" : {
+      "_id" : "edbe4791-fca0-4c03-b7e9-6f1ed13ae68b"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/imageprocessor/img" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "68847af02833022f58cbaa4f",
+      "name" : "Chinmayee-kong",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 12,
+      "dbless" : false
+    }
+  }, {
+    "routeId" : "76fd35d3-5d50-4111-83f5-d5d4f32db56b",
+    "routeName" : "getUploadDocument",
+    "service" : {
+      "_id" : "edbe4791-fca0-4c03-b7e9-6f1ed13ae68b"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "GET" ],
+    "paths" : [ "/imageprocessor/{id}/{channel}" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "68847af02833022f58cbaa4f",
+      "name" : "Chinmayee-kong",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 12,
+      "dbless" : false
+    }
+  }, {
+    "routeId" : "fd4e71ef-e56f-4f0d-af4b-4922a8eae25f",
+    "routeName" : "postDocument",
+    "service" : {
+      "_id" : "edbe4791-fca0-4c03-b7e9-6f1ed13ae68b"
+    },
+    "protocols" : [ "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/imageprocessor/image" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "68847af02833022f58cbaa4f",
+      "name" : "Chinmayee-kong",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 12,
+      "dbless" : false
+    }
+  } ],
+  "plugins" : [ {
+    "id" : "f5c30e20-1cc0-4a64-b109-fa7c43623aee",
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "",
+    "serviceName" : "documentuploader-api-v1",
+    "configs" : { }
+  } ]
+}
