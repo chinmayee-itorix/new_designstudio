@@ -1,0 +1,66 @@
+{
+  "id" : "688b3664d068b64c6b1976cb",
+  "cts" : 1753953892646,
+  "mts" : 1753953892646,
+  "createdBy" : "Akshatha SM",
+  "modifiedBy" : "Akshatha SM",
+  "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+  "runtime" : "Chinmayee-kong",
+  "workspace" : "chinmayee-workspace",
+  "swaggerId" : "",
+  "serviceName" : "customers-API-test",
+  "revision" : 0,
+  "swaggerVersion" : "",
+  "swaggerName" : "",
+  "serviceId" : "05a46622-c340-45da-9c45-a5b6406db906",
+  "service" : {
+    "serviceName" : "customers-API-test",
+    "protocol" : "https",
+    "host" : "qa-dev-ieia.apiwiz.io",
+    "hosts" : [ ],
+    "basePath" : "/customers",
+    "basePaths" : [ ],
+    "port" : 443,
+    "ports" : [ ],
+    "metadata" : { },
+    "kongKonnectPayload" : { }
+  },
+  "routes" : [ {
+    "routeId" : "8798a316-0254-45b0-8cdc-bb7f66f90ce8",
+    "routeName" : "login-api-test",
+    "service" : {
+      "_id" : "05a46622-c340-45da-9c45-a5b6406db906"
+    },
+    "protocols" : [ "http", "https" ],
+    "methods" : [ "POST" ],
+    "paths" : [ "/v1/api" ],
+    "metadata" : {
+      "headers" : [ ],
+      "path_handling" : "v0",
+      "hosts" : [ ],
+      "regex_priority" : 0,
+      "preserve_host" : false,
+      "strip_path" : false
+    },
+    "kongRuntime" : {
+      "id" : "68847af02833022f58cbaa4f",
+      "name" : "Chinmayee-kong",
+      "kongAdminToken" : "test",
+      "kongAdminHost" : "https://test1-kong-admin.apiwiz.io",
+      "tier" : "free",
+      "type" : "onprem",
+      "workspaceCount" : 0,
+      "readOnly" : false,
+      "sequence" : 12,
+      "dbless" : false
+    }
+  } ],
+  "plugins" : [ {
+    "id" : "5a4e6fd1-9a4f-4e27-a22a-486af0a4e1ae",
+    "pluginName" : "basic-auth",
+    "enabled" : true,
+    "workspaceName" : "",
+    "serviceName" : "customers-API-test",
+    "configs" : { }
+  } ]
+}
