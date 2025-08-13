@@ -1,0 +1,1 @@
+{"mobileNumbercheck":{"type":"object","properties":{"meta":{"type":"object","properties":{"totalPages":{"type":"number","example":1}}},"status":{"type":"object","properties":{"code":{"example":"00","$ref":"#/definitions/string"},"message":{"example":"Success","$ref":"#/definitions/string"}}}}},"definitions":{}}
