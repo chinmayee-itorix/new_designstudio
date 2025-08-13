@@ -1,0 +1,1 @@
+{"User Profile":{"type":"object","properties":{"id":{"type":"integer","minimum":1},"name":{"minLength":1,"$ref":"#/definitions/string"},"email":{"format":"email","$ref":"#/definitions/string"},"age":{"type":"integer","minimum":0},"isActive":{"type":"boolean"}}},"definitions":{}}

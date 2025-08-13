@@ -1,0 +1,1 @@
+{"device_registration_01":{"type":"object","properties":{"data":{"type":"object","properties":{"deviceid":{"example":"13d8414a94244015ae934d6c7a241467xFMyyrlT","$ref":"#/definitions/string"}}},"status":{"type":"object","properties":{"code":{"example":"N","$ref":"#/definitions/string"},"message":{"example":"New Device Token","$ref":"#/definitions/string"}}}}},"definitions":{}}
