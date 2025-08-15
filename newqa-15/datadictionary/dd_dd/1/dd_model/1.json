@@ -1,0 +1,1 @@
+{"dd_model":{"type":"object","properties":{"ok":{"example":"ok","$ref":"#/definitions/string"}}},"definitions":{}}
